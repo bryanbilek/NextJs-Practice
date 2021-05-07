@@ -1,13 +1,13 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
-import ReactPlayer from 'react-player'
-// import VideoBg from '../public/port-background.mp4'
+// import ReactPlayer from 'react-player'
+import VideoBg from "../public/port-background.mp4";
 
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <ReactPlayer url='https://youtu.be/LWJfxDkPB7E' muted loop playing controls={false} width='100%' height='100%'/>
-      {/* <video
+      {/* <ReactPlayer url='https://youtu.be/LWJfxDkPB7E' muted loop playing controls={false} width='100%' height='100%'/> */}
+      <video
         autoPlay
         loop
         muted
@@ -22,8 +22,8 @@ function MyApp({ Component, pageProps }) {
           zIndex: "-1",
         }}
       >
-        <source url='https://youtu.be/LWJfxDkPB7E' type="video/mp4" />
-      </video> */}
+        <source src={VideoBg} type="video/mp4" />
+      </video>
       <Component {...pageProps} />
     </Layout>
   );
